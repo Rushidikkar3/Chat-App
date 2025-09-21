@@ -1,4 +1,4 @@
-# HariChatApp
+# ChatApp
 
 Comprehensive guide to create a chat app using the MERN stack:
 

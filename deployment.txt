@@ -1,0 +1,24 @@
+In server.js
+import path from 'path';
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+//must be at last middleware
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/frontend/dist/index.html'));
+});
+
+
+in backend package.json,
+add script:
+"start": "node backend/server.js",
+"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+this will download all package in backend and frontend and run build for frontend generate build
+
+
+
+process:
+npm run build
+npm run start
+both frontend and backend now run on 3000 on a single port 
+  

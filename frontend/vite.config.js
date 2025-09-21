@@ -8,8 +8,8 @@ export default defineConfig({
     // port: 5173,
     proxy: {
 			"/api": {
-				target: "http://localhost:8000",
-				// target: "https://harichatapp.onrender.com",
+				// target: "http://localhost:8000",
+				target: "https://rushi-chat-app.onrender.com",
 			},
 		},
   },
